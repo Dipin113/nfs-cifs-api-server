@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  nfs_cifs_server:
+    build: .
+    privileged: true
+    ports:
+      - "2049:2049"
+      - "111:111/udp"
+      - "111:111/tcp"
+      - "445:445"
+      - "139:139"
+      - "8000:8000"
+    volumes:
+      - nfs_data:/exports/data
+
+volumes:
+  nfs_data:
+    driver: local
