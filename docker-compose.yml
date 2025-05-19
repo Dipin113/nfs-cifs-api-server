@@ -1,5 +1,3 @@
-version: "latest"
-
 services:
   nfs_cifs_server:
     build: .
