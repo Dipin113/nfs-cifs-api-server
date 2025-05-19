@@ -1,6 +1,6 @@
 FROM debian:bookworm-slim AS builder
 
-RUN sudo apt update && sudo apt install -y --no-install-recommends \
+RUN apt update && apt install -y --no-install-recommends \
     python3 python3-pip python3-venv \
     nfs-kernel-server samba rpcbind curl ca-certificates \
     && python3 -m pip install --no-cache-dir fastapi uvicorn \
